@@ -3,29 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A serene and beautiful gratitude journal to help you focus on the positive aspects of life.">
-    <title>Gratitude Journal | Daily Mindfulness</title>
+    <meta name="description" content="Marc Perez — Gamer, Artist, and Developer. Personal webpage showcasing my interests, skills, and projects.">
+    <title>Marc Perez | Gamer · Artist · Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <header>
-            <h1>My Gratitude Journal</h1>
-            <p class="subtitle">Focus on the good, and the good gets better.</p>
-        </header>
 
-        <section class="input-section">
-            <textarea id="gratitude-input" placeholder="What are you grateful for today?"></textarea>
-            <button id="save-btn">Capture Gratitude</button>
-        </section>
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar">
+        <div class="nav-brand">MP</div>
+        <button id="hamburger" class="hamburger" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
 
-        <section class="entries-section">
-            <h2>📜 Previous Entries</h2>
-            <div id="entries-container">
-                <!-- Entries will be added here -->
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero" class="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content fade-in">
+            <div class="hero-avatar-wrapper">
+                <img src="hero_avatar.png" alt="Marc Perez anime-style avatar surrounded by gaming and art elements" class="hero-avatar" id="hero-avatar">
             </div>
-        </section>
-    </div>
+            <h1 class="hero-title">
+                Hey, I'm <span class="gradient-text">Marc Perez</span>
+            </h1>
+            <p class="hero-tagline">Gamer · Artist · Developer</p>
+            <a href="#about" class="hero-cta">Get to know me ↓</a>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ME ===== -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title fade-in">
+                <span class="title-icon">🎮</span> About Me
+            </h2>
+            <div class="about-content fade-in">
+                <p>
+                    What's up! I'm <strong>Marc</strong> — a creative person who loves blending art and technology.
+                    Whether I'm sketching anime characters, grinding through a Nintendo game, or coding up a new project,
+                    I'm always creating something.
+                </p>
+                <p>
+                    I've been diving deep into web development and AI-powered tools, and I'm excited to share
+                    what I've built. My journey combines my love for <em>gaming</em>, <em>drawing</em>, and <em>code</em>
+                    into projects that are as fun to make as they are to use.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-emoji">🕹️</span>
+                        <span>Nintendo Fan</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-emoji">✏️</span>
+                        <span>Artist & Drawer</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-emoji">💻</span>
+                        <span>Web Developer</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-emoji">🤖</span>
+                        <span>AI Explorer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INTERESTS ===== -->
+    <section id="interests" class="section interests">
+        <div class="container">
+            <h2 class="section-title fade-in">
+                <span class="title-icon">⭐</span> What I'm Into
+            </h2>
+            <div class="interests-grid">
+
+                <div class="interest-card fade-in" style="--card-accent: #ff6b9d;">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">🎮</div>
+                    <h3>Nintendo Gaming</h3>
+                    <p>From Zelda to Pokémon to Mario — Nintendo games have been a huge part of my life. I love the creativity and joy they bring to every adventure.</p>
+                </div>
+
+                <div class="interest-card fade-in" style="--card-accent: #00d4ff;">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">🎨</div>
+                    <h3>Art & Drawing</h3>
+                    <p>I'm always sketching — from character designs to landscapes. Drawing is how I express my creativity and bring my imagination to life.</p>
+                </div>
+
+                <div class="interest-card fade-in" style="--card-accent: #ffd700;">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">⚡</div>
+                    <h3>Anime</h3>
+                    <p>Anime inspires my art style and fuels my imagination. The storytelling, the visuals, the epic battles — I'm here for all of it.</p>
+                </div>
+
+            </div>
+            <div class="interests-banner fade-in">
+                <img src="interests_graphic.png" alt="Illustration showing Nintendo Switch, anime sketch, code terminal, and game controller" class="interests-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TECH SKILLS ===== -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title fade-in">
+                <span class="title-icon">🛠️</span> Tech Skills
+            </h2>
+            <p class="section-subtitle fade-in">Tools and technologies I've been learning and using</p>
+
+            <div class="skills-grid">
+
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <span class="skill-icon">🐙</span>
+                        <h3>GitHub</h3>
+                    </div>
+                    <p>Version control, repositories, commits, and collaboration. All my projects are tracked and shared through GitHub.</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-width="85"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <span class="skill-icon">🚀</span>
+                        <h3>Google Antigravity</h3>
+                    </div>
+                    <p>AI-powered coding assistant that helps me build, debug, and ship projects faster than ever. My secret weapon!</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-width="90"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <span class="skill-icon">🤖</span>
+                        <h3>Skill Agents</h3>
+                    </div>
+                    <p>Specialized AI agents that handle complex tasks — from data collection to layout design. I've orchestrated multiple agents on real projects.</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-width="80"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <span class="skill-icon">🌐</span>
+                        <h3>HTML / CSS / JS</h3>
+                    </div>
+                    <p>The core web stack — I build interactive, responsive, and beautifully styled web pages from scratch.</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-width="75"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title fade-in">
+                <span class="title-icon">📂</span> My Projects
+            </h2>
+            <p class="section-subtitle fade-in">Things I've built — powered by creativity and AI</p>
+
+            <div class="projects-grid">
+
+                <a href="https://github.com/marcperezart" target="_blank" rel="noopener" class="project-card fade-in" style="--project-accent: #ff6b6b;">
+                    <div class="project-number">01</div>
+                    <h3>PokéExplorer / Super-Dex</h3>
+                    <p>A Pokémon research hub pulling data from multiple sources — Bulbapedia, PokéDB, and Serebii. Features comparison tools, stat bars, and accessibility-first design.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS/JS</span>
+                        <span class="tag">API Data</span>
+                        <span class="tag">Skill Agents</span>
+                    </div>
+                    <span class="project-link">View on GitHub →</span>
+                </a>
+
+                <a href="https://github.com/marcperezart/gratitude-journal" target="_blank" rel="noopener" class="project-card fade-in" style="--project-accent: #48dbfb;">
+                    <div class="project-number">02</div>
+                    <h3>Gratitude Journal</h3>
+                    <p>A serene, glassmorphic web app for daily mindfulness. Save and reflect on what you're grateful for with beautiful animations and local storage.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS/JS</span>
+                        <span class="tag">LocalStorage</span>
+                        <span class="tag">Glassmorphism</span>
+                    </div>
+                    <span class="project-link">View on GitHub →</span>
+                </a>
+
+                <a href="https://github.com/marcperezart" target="_blank" rel="noopener" class="project-card fade-in" style="--project-accent: #ffd32a;">
+                    <div class="project-number">03</div>
+                    <h3>Driving Simulator</h3>
+                    <p>A realistic 3D driving experience with proper gear logic, turn signals, and physics. Built for a professional presentation with smooth controls.</p>
+                    <div class="project-tags">
+                        <span class="tag">3D / Physics</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Interactive</span>
+                    </div>
+                    <span class="project-link">View on GitHub →</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-brand gradient-text">Marc Perez</p>
+                <p class="footer-tagline">Built with ❤️, creativity, and a little help from AI</p>
+                <div class="footer-links">
+                    <a href="https://github.com/marcperezart" target="_blank" rel="noopener" class="footer-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                </div>
+                <p class="footer-copy">© 2026 Marc Perez. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

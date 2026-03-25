@@ -1,21 +1,38 @@
-# ✨ Modern Gratitude Journal ✨
+# Marc Perez — Personal Webpage 🎮✨
 
-A serene, mindful space to record your daily gratitudes. Built with a focus on aesthetics and simplicity.
+A stunning personal webpage showcasing who I am: a **gamer**, **artist**, and **developer**.
 
 ## 🌟 Features
-- **Mindful Aesthetics**: Calm, watercolor background with a modern glassmorphism UI.
-- **Local Persistence**: Your entries are saved to your browser's local storage.
-- **Micro-animations**: Smooth transitions and interactive elements for a premium feel.
-- **Responsive Design**: Looks great on desktop and mobile.
 
-## 🛠 Tech Stack
-- **HTML5** (Semantic structure)
-- **Vanilla CSS3** (Custom properties, Flexbox, Animations)
-- **JavaScript** (Local storage, DOM manipulation)
+- **Dark anime/gaming theme** with neon cyan, pink, and gold accents
+- **Smooth scroll animations** that reveal content as you explore
+- **Floating particle effects** in the hero section
+- **Responsive design** — looks great on desktop and mobile
+- **Interactive skill bars** that animate on scroll
+- **Project showcase** linking to my GitHub repos
 
-## 🎨 Theme
-- **Color Palette**: Muted olives, warm sands, and peach blushes.
-- **Typography**: Inter (Body) & Outfit (Headings).
+## 🛠️ Built With
+
+- HTML5, CSS3, JavaScript
+- [Google Antigravity](https://idx.google.com/) — AI coding assistant
+- Skill Agents for specialized tasks
+- GitHub for version control & deployment
+
+## 📂 Sections
+
+| Section | Description |
+|---------|-------------|
+| Hero | Animated intro with avatar and tagline |
+| About Me | Bio and personality highlights |
+| Interests | Nintendo gaming, art/drawing, anime |
+| Tech Skills | GitHub, Antigravity, Skill Agents, Web Dev |
+| Projects | PokéExplorer, Gratitude Journal, Driving Sim |
+| Footer | GitHub link and credits |
+
+## 🚀 Live Demo
+
+Visit the live page: [marcperezart.github.io/gratitude-journal](https://marcperezart.github.io/gratitude-journal)
 
 ---
-*Capture the good bits of life.*
+
+*Built with ❤️, creativity, and a little help from AI*
