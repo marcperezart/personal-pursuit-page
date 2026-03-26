@@ -573,9 +573,6 @@ img {
     transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.skill-bar.animate {
-    /* width set via JS data-width attribute */
-}
 
 /* ===== PROJECTS ===== */
 .projects-grid {
