@@ -196,6 +196,47 @@ img {
     width: 100%;
 }
 
+/* Status Indicator */
+.live-status {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 212, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 50px;
+    margin-left: 1rem;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--neon-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--neon-cyan);
+    animation: statusPulse 2s infinite;
+}
+
+.status-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--neon-cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@keyframes statusPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* Hide status on narrow screens to keep nav clean */
+@media (max-width: 1000px) {
+    .live-status {
+        display: none;
+    }
+}
+
 /* Hamburger */
 .hamburger {
     display: none;
