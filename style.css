@@ -39,6 +39,8 @@
     --font-heading: 'Outfit', sans-serif;
 
     --nav-height: 70px;
+    
+    --neon-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
 }
 
 /* ===== RESET ===== */
@@ -266,8 +268,11 @@ img {
     opacity: 0;
 }
 
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+/* Badge Styling */
+.badge-neon {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 5px var(--neon-cyan);
+    font-weight: 700;
 }
 
 /* ===== HERO ===== */
@@ -370,6 +375,50 @@ img {
     transform: translateY(-3px);
 }
 
+/* Queens Origins Card */
+.origins-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--neon-cyan);
+    padding: 1.2rem 2rem;
+    border-radius: var(--radius-md);
+    max-width: 450px;
+    margin: 0 auto 2.5rem;
+    box-shadow: var(--neon-shadow);
+    text-align: left;
+}
+
+.origins-icon {
+    font-size: 2.2rem;
+}
+
+.origins-text h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--neon-cyan);
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.origins-text p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.grow-in {
+    animation: growIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes growIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
 /* ===== ABOUT ===== */
 .about-content {
     background: var(--bg-card);
@@ -388,8 +437,19 @@ img {
     margin-bottom: 1.2rem;
 }
 
+.about-lead {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid var(--neon-cyan);
+    padding-left: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
 .about-content p strong {
     color: var(--text-primary);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
 }
 
 .about-content p em {
@@ -498,10 +558,6 @@ img {
     line-height: 1.6;
 }
 
-.interests-banner {
-    text-align: center;
-}
-
 .interests-img {
     max-width: 500px;
     margin: 0 auto;
@@ -510,7 +566,146 @@ img {
     box-shadow: var(--shadow-card);
 }
 
-/* ===== SKILLS ===== */
+/* ===== ART GALLERY ===== */
+.gallery-container {
+    margin-top: 5rem;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 4rem;
+}
+
+.gallery-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gallery-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-main);
+    box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.artwork-card.neon-frame {
+    background: #ffffff; /* Classic Polaroid base */
+    padding: 12px 12px 45px 12px;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1);
+    cursor: zoom-in;
+    transform: rotate(calc(var(--rotation, 0deg)));
+}
+
+.artwork-card:nth-child(even) { --rotation: -1.5deg; }
+.artwork-card:nth-child(odd) { --rotation: 1.5deg; }
+
+.artwork-card:hover {
+    transform: translateY(-15px) scale(1.05) rotate(0deg);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-pink);
+    z-index: 10;
+}
+
+.frame-content {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid #ddd;
+}
+
+.frame-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(1.1);
+    transition: transform 0.5s ease;
+}
+
+.artwork-card:hover img {
+    transform: scale(1.1);
+}
+
+.art-label {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: #333;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* Evolution Section */
+.evolution-card {
+    background: var(--bg-card);
+    border: 1px solid var(--neon-pink);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: 0 0 20px rgba(255, 107, 157, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.evolution-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--neon-pink);
+}
+
+.evolution-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.evolution-icon {
+    font-size: 2rem;
+}
+
+.evolution-header h2 {
+    font-family: var(--font-heading);
+    color: var(--neon-pink);
+    font-size: 1.8rem;
+}
+
+.evolution-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.evolution-content strong {
+    color: var(--text-primary);
+}
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -629,12 +824,23 @@ img {
     line-height: 1;
 }
 
-.project-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.8rem;
-    color: var(--text-primary);
+/* Personal Tattoo Section */
+.personal-section {
+    margin: 1.5rem 0 2.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--text-muted);
+}
+
+.personal-section p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.personal-section strong {
+    color: var(--neon-gold);
 }
 
 .project-card p {
